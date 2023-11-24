@@ -53,10 +53,10 @@ public class autosuggest_dropdown {
 		    for (WebElement webEle : lists) 
 		    {
 		    String e=webEle.getText();
-		     if(e.contains(" download"))
+		     if(e.contains(" webdriver"))
 		     {
 		    	 
-		    	 Thread.sleep(5000);
+		    	 Thread.sleep(2000);
 		    	 webEle.click();
 		    	 break;
 		     }

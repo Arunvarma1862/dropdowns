@@ -33,7 +33,7 @@ public class Multiple_dropdown {
 
 		String parentwindow = driver.getWindowHandle();
 
-		driver.findElement(By.xpath("//li[text()='Multiple dropdown']")).click();
+		driver.findElement(By.xpath("//li[text()='Multiple dropdown/Jquery dropdown']")).click();
 
 		Set<String> windows = driver.getWindowHandles();
 
@@ -59,6 +59,9 @@ public class Multiple_dropdown {
 				Thread.sleep(2000);
 
 				ideoptions.selectByVisibleText("Bumrah_96");
+				Thread.sleep(2000);
+				
+				ideoptions.deselectByVisibleText("Sehwag_49");
 				Thread.sleep(2000);
 
 //    			ideoptions.deselectByVisibleText("Bumrah_96");

@@ -22,9 +22,7 @@ public class Bootstrap_dropdown {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-	
 
-	
 	WebDriverManager.chromedriver().setup();
 	ChromeOptions options = new ChromeOptions();
 	options.addArguments("--remote-allow-origins=*");
@@ -70,14 +68,14 @@ driver.get("http://127.0.0.1:3000/dropdowns/index.html");
 		     driver.findElement(By.xpath("//div[@class='drp1']//div[@class='dropdown']")).click();
 		     List<WebElement> elements= driver.findElements(By.xpath("//ul[@class='dropdown1 dropdown-menu']/li"));
 		     System.out.println(elements.size());
-		     selectDrop(elements,"Accounts");
+		     selectDrop(elements,"Cards");
 
 		  //product
 		 
 		     driver.findElement(By.xpath("//div[@class='drp2']//div[@class='dropdown']")).click();
 		     List<WebElement>ele= driver.findElements(By.xpath("//ul[@class='dropdown2 dropdown-menu']/li"));
 		     System.out.println(ele.size());
-		     selectDrop(ele,"Savings Accounts");
+		     selectDrop(ele,"Debit cards");
 		  
 		    //  driver.quit();
 	   }
@@ -90,7 +88,7 @@ driver.get("http://127.0.0.1:3000/dropdowns/index.html");
 	
 	           for (WebElement Element : eles)
 	            {
-		           if(Element.getText().equals(value)) {
+		           if(Element.getText().equalsIgnoreCase(value)) {
 			        Element.click();
 			       break;
 			  

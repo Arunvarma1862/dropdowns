@@ -21,7 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 ;
 
-public class Jquery_dropdown {
+public class Multiple_Jquery_dropdown {
 	
 	public static WebDriver  driver;
 	public  static WebDriverWait wait;
@@ -38,17 +38,17 @@ public static void main(String[] args) throws Exception{
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(11));
 		
-		driver.get("https://www.hyrtutorials.com/p/html-dropdown-elements-practice.html");
+		driver.get("http://127.0.0.1:3000/dropdowns/Multiple.html");
 	//	driver.findElement(By.id("ide")).click();
 		
-	//	selectdrop(driver,"Eclipse");
-	//	selectdrop(driver,"Eclipse","Visual Studio");
+   // 	selectdrop(driver,"Kohil_18");
+		//selectdrop(driver,"Sehwag_49","ArunBabu_88");
 		  selectdrop(driver,"all");
 
 	}
-	public static void selectdrop(WebDriver driver,String...value) {
+	public static void selectdrop(WebDriver driver,String...value) throws InterruptedException {
 		
-		 List<WebElement> list= driver.findElements(By.xpath("//select[@id='ide']/option"));
+		 List<WebElement> list= driver.findElements(By.xpath("//select[@id='Team']/option"));
 		 
 		 if(!value[0].equalsIgnoreCase("all"))
 		 {
@@ -60,7 +60,9 @@ public static void main(String[] args) throws Exception{
 				{
 					if(text.equals(val))
 					{
+						Thread.sleep(1000);
 						item.click();
+						Thread.sleep(1000);
 						break;
 					}
 				}
@@ -70,7 +72,9 @@ public static void main(String[] args) throws Exception{
 		 {
 			 for (WebElement item : list) 
 			 {
+					Thread.sleep(1000);
 				 item.click();
+					Thread.sleep(1000);
 				 		
 			}
 		 }

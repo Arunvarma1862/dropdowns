@@ -35,9 +35,9 @@ public static void main(String[] args) throws InterruptedException {
 		options.addArguments("Start-maximized");
 		options.addArguments("--remote-allow-origins=*");
 		options.setExperimentalOption("excludeSwitches", Collections.singleton("enable-automatiom"));
-	 driver= new ChromeDriver(options);
+	    driver= new ChromeDriver(options);
 	//	driver.get("http://127.0.0.1:5500/dropdowns/single.html");
-		driver.get("http://127.0.0.1:5500/dropdowns/Multiple.html");
+		   driver.get("http://127.0.0.1:3000/dropdowns/Multiple.html");
 		
 //		driver.findElement(By.xpath("//a[text()='Live Posting']")).click();
 		

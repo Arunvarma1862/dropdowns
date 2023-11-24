@@ -58,7 +58,7 @@ public class auto_dropdown
     	  
       }
       while(!text.isEmpty());
-driver.quit();
+      driver.quit();
 }
 
 }

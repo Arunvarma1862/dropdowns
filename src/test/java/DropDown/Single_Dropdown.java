@@ -29,13 +29,14 @@ public class Single_Dropdown {
 			options.addArguments("--remote-allow-origins=*");
 		    driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
-    	driver.get("http://127.0.0.1:3000/dropdowns/index.html");
+    	
     	wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 //		driver.get("https://www.hyrtutorials.com/p/html-dropdown-elements-practice.html");
+    	driver.get("http://127.0.0.1:3000/dropdowns/index.html");
     	
 String parentwindow=	driver.getWindowHandle();
 
-
+Thread.sleep(2000);
 wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hello"))).click();
 		
 
@@ -76,8 +77,6 @@ wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hello"))).click(
 		act.moveToElement(driver.findElement(By.id("Player"))).click().perform();	
 		Thread.sleep(2000);
 		
-		
-	
 	
 		
 		String visiblefirst = courseElement.getFirstSelectedOption().getText();
